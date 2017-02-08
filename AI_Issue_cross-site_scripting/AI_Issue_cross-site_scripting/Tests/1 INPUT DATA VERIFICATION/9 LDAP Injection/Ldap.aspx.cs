@@ -44,7 +44,7 @@ namespace Mopas.Tests
             
             // XSS
             name = Request.Params["name"];
-            // FIXED: AI issue #65, High, Cross-site Scripting, vstfs:///WorkItemTracking/WorkItem/65
+            // TODO: AI issue #65, High, Cross-site Scripting, vstfs:///WorkItemTracking/WorkItem/65
             // GET /Tests/1%20INPUT%20DATA%20VERIFICATION/9%20LDAP%20Injection/Ldap.aspx?name=%3cscript%3ealert(1)%3c%2fscript%3e HTTP/1.1
             // Host: localhost
             Response.Write("<b>Hello, " + name + "!</b>");  
